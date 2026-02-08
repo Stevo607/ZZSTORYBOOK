@@ -1,0 +1,15 @@
+{
+  "name": "MagicStorybook-GenAI",
+  "description": "A magical, personalized children's story generator using React, Tailwind, and the Google GenAI SDK. Features story generation, parallel illustration, and PCM text-to-speech with auto-page turning.",
+  "authors": ["Gemini Senior Frontend Engineer"],
+  "simulations": [
+    {
+      "files": {
+        "index.html": {
+          "label": "Magic Storybook App"
+        }
+      },
+      "entrypoint": "index.html"
+    }
+  ]
+}
