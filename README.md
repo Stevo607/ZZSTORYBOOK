@@ -20,6 +20,10 @@ Magic Storybook is a browser-based app that creates personalized children’s st
 - `archive/` — legacy files retained for reference
 - `README_PROD.md` — production deployment and security guide
 
+## Security Warning
+
+⚠️ This repository should not contain API keys, `.env` files, private certificates, or any local secret material. Use environment variables and a backend proxy for production deployments.
+
 ## Production & Security
 
 For deployment architecture, backend proxy pattern, key management, rate limiting, and hardening checklist, see:
