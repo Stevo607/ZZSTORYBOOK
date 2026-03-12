@@ -262,3 +262,20 @@ Implement a minimal Node/Express (or serverless) backend with these three endpoi
 - `/api/audio/tts`
 
 Then update frontend calls to use your backend base URL and remove all client-side API key handling.
+
+---
+
+## 16) Security Quick Rules (Commit Gate)
+
+Before every commit/push, verify all of the following:
+
+1. No `.env` files or secrets are staged (`.env`, keys, certs, tokens, private JSON credentials).
+2. `node_modules/` is never committed.
+3. No API keys are present in `index.html`, JS, or config files.
+4. All GenAI calls route through backend API endpoints only.
+5. CORS is restricted to approved production/staging origins.
+6. Rate limiting is enabled on story/image/tts endpoints.
+7. Logs do not include raw secrets or full credential payloads.
+8. Dependency/security scan passes (or documented exception approved).
+
+**Stop-ship rule:** If any item above fails, do not deploy.
